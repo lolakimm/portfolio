@@ -12,6 +12,7 @@ body {
     background-position: center;
 }
 
+/* Full Page Elements */
 .top-banner {
     padding: 8px;
     padding-left: 18px;
@@ -21,12 +22,13 @@ body {
     background-color: #FFF8FF;
 }
 
-.top-banner-text {
+.top-banner-content {
     display: flex;
     width: 100%;
+    color: #6550A4;
 }
 
-.top-banner-text h1 {
+.top-banner-content h1 {
     margin: 0;
     font-family: 'Pixelify Sans', sans-serif;
     font-weight: 400;
@@ -40,8 +42,28 @@ body {
     margin-left: auto;
 }
 
+.btn {
+    padding: 3px;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 15px;
+    border: 0;
+    outline: none;
+    border-radius: 3px;
+}
+
+.desktop-icons {
+    position: absolute;
+    top: 80px;
+    left: 18px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(4, auto);
+    column-gap: 24px;
+}
+
 .bottom-banner {
     background-color: #FFF8FF;
+    color: #6550A4;
     width: 100%;
     padding: 8px;
     padding-left: 18px;
@@ -50,10 +72,72 @@ body {
     margin-top: auto;
 }
 
-.bottom-banner-text h1 {
+.bottom-banner-content h1 {
     margin: 0;
     margin-top: auto;
     font-family: 'Pixelify Sans', sans-serif;
     font-weight: 400;
     font-size: 20px;
 }
+
+/* Popup Page Elements */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-family: 'Pixelify Sans', sans-serif;
+    color: #FFF8FF;
+    cursor: pointer;
+    padding-bottom: 12px;
+}
+
+.button-container img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    image-rendering: pixelated;
+}
+
+.button-container label {
+    /* background: #6550A4; */
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+.button-container button {
+    background: none;
+    cursor: pointer;
+}
+
+/* .popup-banner {
+    padding: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 3px 3px 0 0;
+    background-color: #DCCBFF;
+}
+
+.popup-banner-text {
+    display: flex;
+    width: 100%;
+}
+
+.popup-banner-text h1 {
+    margin: 0;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+} */
+
+/* #about-me-popup {
+    display: none; 
+    height: 500px;
+    width: 500px;
+    border-radius: 3px;
+    background-color: #FFF8FF;
+} */
