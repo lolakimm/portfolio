@@ -80,7 +80,7 @@ body {
     font-size: 20px;
 }
 
-/* Popup Page Elements */
+/* Desktop Icons */
 .button-container {
     display: flex;
     flex-direction: column;
@@ -112,32 +112,77 @@ body {
     cursor: pointer;
 }
 
-/* .popup-banner {
-    padding: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
-    width: 100%;
+/* Popup Window Formatting */
+.popup-container {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    background: #FFF8FF;
+    border-radius: 3px;
+    border: 2px solid #6550A4;
+}
+
+.popup-container h1,
+.popup-container h3,
+.popup-container p {
+    color: #6550A4;
+}
+
+.popup-container button {
+    width: fit-content;
+    height: fit-content;
+    align-self: flex-end;
+    border-radius: 2px;
+    border-color: #FF65B5;
+    background: #FFD6ED;
+    color: #FF65B5;
+}
+
+.popup-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px; 
     box-sizing: border-box;
     border-radius: 3px 3px 0 0;
+    border-bottom: 2px solid #6550A4;
     background-color: #DCCBFF;
 }
 
-.popup-banner-text {
-    display: flex;
-    width: 100%;
+.popup-banner h1 {
+    color: #6550A4;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    margin-left: 5px;
 }
 
-.popup-banner-text h1 {
-    margin: 0;
-    font-family: 'Pixelify Sans', sans-serif;
-    font-weight: 400;
-    font-size: 15px;
-} */
+#about-me-popup {
+    width: min(600px, calc(100vw - 32px));
+    height: min(500px, calc(100vh - 32px));
 
-/* #about-me-popup {
-    display: none; 
-    height: 500px;
-    width: 500px;
-    border-radius: 3px;
-    background-color: #FFF8FF;
-} */
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+
+    z-index: 1000;
+    box-sizing: border-box;
+    overflow: auto;
+    visibility: hidden;
+    transition: transform 0.3s, top 0.3s;
+}
+
+#about-me-popup.open-popup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#about-me-popup h1,
+#about-me-popup h3,
+#about-me-popup p {
+    margin-left: 15px;
+    margin-right: 15px;
+}

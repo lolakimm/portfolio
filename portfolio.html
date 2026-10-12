@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>LoLa Kim - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -19,10 +24,21 @@
     <nav class="desktop-icons">
       <div class="about-me">
         <div class="button-container">
-          <button id="about-me-btn" class="btn">
+          <button id="about-me-btn" class="btn" onclick="openAboutMePopup()">
             <img src="images/about_me.png">
           </button>
           <label for="about-me-btn">About Me</label>
+          <div id="about-me-popup" class="popup-container">
+            <div class="popup-banner">
+              <h1>About Me.exe</h1>
+              <button id="close-about-me-btn" class="close-popup-btn" onclick="closeAboutMePopup()">X</button>
+            </div>
+            <!-- Replace img w/profile icon -->
+            <!-- <img src="">  -->
+            <h1>About Me</h1>
+            <h3>Education</h3>
+            <p>I am a recent Computer Science graduate from the University of California, Irvine</p>
+          </div>
         </div>
       </div>
 
@@ -91,10 +107,5 @@
 
   </body>
 
-  <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 </html>

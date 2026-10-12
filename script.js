@@ -8,5 +8,21 @@ function updateDateTime() {
     day.innerHTML = currentDate.toLocaleDateString();
 }
 
+function openAboutMePopup() {
+    let popup = document.getElementById("about-me-popup");
+
+    popup.classList.add("open-popup");
+}
+
+function closeAboutMePopup() {
+    let popup = document.getElementById("about-me-popup");
+
+    popup.classList.remove("open-popup");
+}
+
 updateDateTime();
 setInterval(updateDateTime, 1000);
+
+function aboutMePopup() {
+    
+}
