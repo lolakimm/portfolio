@@ -177,7 +177,7 @@ body {
 #about-me-popup.open-popup {
     visibility: visible;
     top: 50%;
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-80%, -60%) scale(1);
 }
 
 #about-me-popup h1,
@@ -185,4 +185,33 @@ body {
 #about-me-popup p {
     margin-left: 15px;
     margin-right: 15px;
+}
+
+#contact-links-popup {
+    width: 400px;
+    height: 300px;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+
+    z-index: 1000;
+    box-sizing: border-box;
+    overflow: auto;
+    visibility: hidden;
+    transition: transform 0.3s, top 0.3s;
+}
+
+#contact-links-popup.open-popup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-10%, -10%) scale(1);
+}
+
+#contact-links-popup h3 {
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 15px;
+    font-weight: 400;
 }

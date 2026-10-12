@@ -8,21 +8,25 @@ function updateDateTime() {
     day.innerHTML = currentDate.toLocaleDateString();
 }
 
+updateDateTime();
+setInterval(updateDateTime, 1000);
+
 function openAboutMePopup() {
     let popup = document.getElementById("about-me-popup");
-
     popup.classList.add("open-popup");
 }
 
 function closeAboutMePopup() {
     let popup = document.getElementById("about-me-popup");
-
     popup.classList.remove("open-popup");
 }
 
-updateDateTime();
-setInterval(updateDateTime, 1000);
+function openContactLinksPopup() {
+    let popup = document.getElementById("contact-links-popup");
+    popup.classList.add("open-popup");
+}
 
-function aboutMePopup() {
-    
+function closeContactLinksPopup() {
+    let popup = document.getElementById("contact-links-popup");
+    popup.classList.remove("open-popup");
 }
