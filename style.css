@@ -122,6 +122,10 @@ body {
     border: 2px solid #6550A4;
 }
 
+.hidden {
+    display: none;
+}
+
 .popup-container h1,
 .popup-container h3,
 .popup-container p {
@@ -147,6 +151,10 @@ body {
     border-radius: 3px 3px 0 0;
     border-bottom: 2px solid #6550A4;
     background-color: #DCCBFF;
+
+    cursor: grab;
+    user-select: none;
+    touch-action: none;
 }
 
 .popup-banner h1 {
@@ -156,6 +164,10 @@ body {
     font-weight: 400;
     margin: 0;
     margin-left: 5px;
+}
+
+.popup-banner:active {
+    cursor: grabbing;
 }
 
 #about-me-popup {
