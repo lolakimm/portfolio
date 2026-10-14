@@ -61,10 +61,19 @@
 
       <div class="projects">
         <div class="button-container">
-          <button id="projects-btn" class="btn">
+          <button id="projects-btn" class="btn" onclick="openProjectsPopup()">
             <img src="images/projects_blue.png">
           </button>
           <label for="projects-btn">Projects</label>
+          <div id="projects-popup" class="popup-container">
+            <div class="popup-banner">
+              <h1>Projects.html</h1>
+              <button id="close-projects-btn" class="close-popup-btn" onclick="closeProjectsPopup()">X</button>
+            </div>
+            <h2>Project 1 Placeholder</h2>
+            <h2>Project 2 Placeholder</h2>
+            <h2>Project 3 Placeholder</h2>
+          </div>
         </div>
       </div>
 

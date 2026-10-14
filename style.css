@@ -122,10 +122,6 @@ body {
     border: 2px solid #6550A4;
 }
 
-.hidden {
-    display: none;
-}
-
 .popup-container h1,
 .popup-container h3,
 .popup-container p {
@@ -226,4 +222,34 @@ body {
     margin-right: 15px;
     font-size: 15px;
     font-weight: 400;
+}
+
+#projects-popup {
+    width: min(720px, calc(100vw - 32px));
+    height: min(620px, calc(100vh - 32px));
+
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+
+    z-index: 1000;
+    box-sizing: border-box;
+    overflow: auto;
+    visibility: hidden;
+    transition: transform 0.3s, top 0.3s;
+}
+
+#projects-popup.open-popup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-40%, -56.5%) scale(1);
+}
+
+#projects-popup h2 {
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #6550A4;
 }

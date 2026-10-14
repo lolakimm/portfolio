@@ -58,3 +58,13 @@ function closeContactLinksPopup() {
     let popup = document.getElementById("contact-links-popup");
     popup.classList.remove("open-popup");
 }
+
+function openProjectsPopup() {
+    let popup = document.getElementById("projects-popup");
+    popup.classList.add("open-popup");
+}
+
+function closeProjectsPopup() {
+    let popup = document.getElementById("projects-popup");
+    popup.classList.remove("open-popup");
+}
