@@ -13,18 +13,23 @@ setInterval(updateDateTime, 1000);
 
 function makeDraggable(popup) {
     const bar = popup.querySelector('.popup-banner');
+    const topBar = document.querySelector('.top-banner');
+    const bottomBar = document.querySelector('.bottom-banner');
     let x = 0, y = 0;
 
     bar.addEventListener('pointerdown', (e) => {
         if (e.target.closest('button')) return;
         bar.setPointerCapture(e.pointerId);
 
-        // restrict window movement to screen size
+        // restrict window movement to screen size (within top and bottom banners)
         bar.onpointermove = (e) => {
             const r = popup.getBoundingClientRect();
 
+            const minTop = topBar.offsetHeight;
+            const maxBottom = window.innerHeight - bottomBar.offsetHeight;
+
             const dx = Math.min(Math.max(e.movementX, -r.left), window.innerWidth - r.right);
-            const dy = Math.min(Math.max(e.movementY, -r.top), window.innerHeight - r.bottom);
+            const dy = Math.min(Math.max(e.movementY, minTop - r.top), maxBottom - r.bottom);
             
             x += dx;
             y += dy;

@@ -225,8 +225,8 @@ body {
 }
 
 #projects-popup {
-    width: min(720px, calc(100vw - 32px));
-    height: min(620px, calc(100vh - 32px));
+    width: 700px;
+    height: 600px;
 
     position: fixed;
     top: 0;
