@@ -68,3 +68,13 @@ function closeProjectsPopup() {
     let popup = document.getElementById("projects-popup");
     popup.classList.remove("open-popup");
 }
+
+function openSkillsPopup() {
+    let popup = document.getElementById("skills-popup");
+    popup.classList.add("open-popup")
+}
+
+function closeSkillsPopup() {
+    let popup = document.getElementById("skills-popup");
+    popup.classList.remove("open-popup");
+}
