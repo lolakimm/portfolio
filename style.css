@@ -139,6 +139,14 @@ body {
     color: #FF65B5;
 }
 
+.popup-container a:link {
+    color: #FF65B5;
+}
+
+.popup-container a:visited {
+    color: #CC006A;
+}
+
 .popup-banner {
     display: flex;
     justify-content: space-between;
@@ -353,4 +361,9 @@ body {
     visibility: visible;
     top: 50%;
     transform: translate(50%, -150%) scale(1);
+}
+
+#linkedin-popup a {
+    text-align: center;
+    margin-top: 25px;
 }
