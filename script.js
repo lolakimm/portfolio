@@ -53,68 +53,43 @@ function makeDraggable(popup) {
 
 document.querySelectorAll('.popup-container').forEach(makeDraggable);
 
-function openAboutMePopup() {
-    let popup = document.getElementById("about-me-popup");
+function openPopup(id) {
+    const popup = document.getElementById(id);
     popup.classList.add("open-popup");
-    bringToFront(popup); 
+    bringToFront(popup);
 }
 
-function closeAboutMePopup() {
-    let popup = document.getElementById("about-me-popup");
+function closePopup(id) {
+    const popup = document.getElementById(id);
     popup.classList.remove("open-popup");
 }
 
-function openContactLinksPopup() {
-    let popup = document.getElementById("contact-links-popup");
-    popup.classList.add("open-popup");
-    bringToFront(popup); 
-}
+// function closeAboutMePopup() {
+//     let popup = document.getElementById("about-me-popup");
+//     popup.classList.remove("open-popup");
+// }
 
-function closeContactLinksPopup() {
-    let popup = document.getElementById("contact-links-popup");
-    popup.classList.remove("open-popup");
-}
+// function closeContactLinksPopup() {
+//     let popup = document.getElementById("contact-links-popup");
+//     popup.classList.remove("open-popup");
+// }
 
-function openProjectsPopup() {
-    let popup = document.getElementById("projects-popup");
-    popup.classList.add("open-popup");
-    bringToFront(popup); 
-}
+// function closeProjectsPopup() {
+//     let popup = document.getElementById("projects-popup");
+//     popup.classList.remove("open-popup");
+// }
 
-function closeProjectsPopup() {
-    let popup = document.getElementById("projects-popup");
-    popup.classList.remove("open-popup");
-}
+// function closeSkillsPopup() {
+//     let popup = document.getElementById("skills-popup");
+//     popup.classList.remove("open-popup");
+// }
 
-function openSkillsPopup() {
-    let popup = document.getElementById("skills-popup");
-    popup.classList.add("open-popup");
-    bringToFront(popup); 
-}
+// function closeGithubPopup() {
+//     let popup = document.getElementById("github-popup");
+//     popup.classList.remove("open-popup");
+// }
 
-function closeSkillsPopup() {
-    let popup = document.getElementById("skills-popup");
-    popup.classList.remove("open-popup");
-}
-
-function openGithubPopup() {
-    let popup = document.getElementById("github-popup");
-    popup.classList.add("open-popup");
-    bringToFront(popup); 
-}
-
-function closeGithubPopup() {
-    let popup = document.getElementById("github-popup");
-    popup.classList.remove("open-popup");
-}
-
-function openLinkedInPopup() {
-    let popup = document.getElementById("linkedin-popup");
-    popup.classList.add("open-popup");
-    bringToFront(popup); 
-}
-
-function closeLinkedInPopup() {
-    let popup = document.getElementById("linkedin-popup");
-    popup.classList.remove("open-popup");
-}
+// function closeLinkedInPopup() {
+//     let popup = document.getElementById("linkedin-popup");
+//     popup.classList.remove("open-popup");
+// }

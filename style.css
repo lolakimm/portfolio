@@ -213,7 +213,7 @@ body {
 #contact-links-popup.open-popup {
     visibility: visible;
     top: 50%;
-    transform: translate(-10%, -10%) scale(1);
+    transform: translate(-80%, -10%) scale(1);
 }
 
 #contact-links-popup h3 {
