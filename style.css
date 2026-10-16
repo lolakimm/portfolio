@@ -313,8 +313,8 @@ body {
 }
 
 #github-popup {
-    width: 320px;
-    height: 100px;
+    width: 375px;
+    height: 130px;
 
     position: fixed;
     top: 0;
@@ -333,14 +333,26 @@ body {
     transform: translate(240px, 160px) scale(1);
 }
 
-#github-popup h2 {
+#github-popup h2, 
+#github-popup p {
     margin-left: 15px;
     margin-right: 15px;
+    margin-bottom: 5px;
     font-size: 15px;
     font-weight: 400;
+    word-spacing: 3px;
     color: #6550A4;
+}
+
+#github-popup .note {
     text-align: center;
 }
+
+#github-popup .note strong{
+    font-size: 18px;
+    font-weight: 400;
+}
+
 
 #linkedin-popup {
     width: 250px;
