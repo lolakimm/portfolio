@@ -11,6 +11,13 @@ function updateDateTime() {
 updateDateTime();
 setInterval(updateDateTime, 1000);
 
+// place most recent windows above less recent ones
+let topZ = 1000;
+
+function bringToFront(popup) {
+    popup.style.zIndex = ++topZ;
+}
+
 function makeDraggable(popup) {
     const bar = popup.querySelector('.popup-banner');
     const topBar = document.querySelector('.top-banner');
@@ -40,6 +47,8 @@ function makeDraggable(popup) {
     bar.addEventListener('pointerup', () => {
         bar.onpointermove = null;
     });
+
+    popup.addEventListener('pointerdown', () => bringToFront(popup));
 }
 
 document.querySelectorAll('.popup-container').forEach(makeDraggable);
@@ -47,6 +56,7 @@ document.querySelectorAll('.popup-container').forEach(makeDraggable);
 function openAboutMePopup() {
     let popup = document.getElementById("about-me-popup");
     popup.classList.add("open-popup");
+    bringToFront(popup); 
 }
 
 function closeAboutMePopup() {
@@ -57,6 +67,7 @@ function closeAboutMePopup() {
 function openContactLinksPopup() {
     let popup = document.getElementById("contact-links-popup");
     popup.classList.add("open-popup");
+    bringToFront(popup); 
 }
 
 function closeContactLinksPopup() {
@@ -67,6 +78,7 @@ function closeContactLinksPopup() {
 function openProjectsPopup() {
     let popup = document.getElementById("projects-popup");
     popup.classList.add("open-popup");
+    bringToFront(popup); 
 }
 
 function closeProjectsPopup() {
@@ -76,7 +88,8 @@ function closeProjectsPopup() {
 
 function openSkillsPopup() {
     let popup = document.getElementById("skills-popup");
-    popup.classList.add("open-popup")
+    popup.classList.add("open-popup");
+    bringToFront(popup); 
 }
 
 function closeSkillsPopup() {
@@ -87,6 +100,7 @@ function closeSkillsPopup() {
 function openGithubPopup() {
     let popup = document.getElementById("github-popup");
     popup.classList.add("open-popup");
+    bringToFront(popup); 
 }
 
 function closeGithubPopup() {
@@ -97,6 +111,7 @@ function closeGithubPopup() {
 function openLinkedInPopup() {
     let popup = document.getElementById("linkedin-popup");
     popup.classList.add("open-popup");
+    bringToFront(popup); 
 }
 
 function closeLinkedInPopup() {

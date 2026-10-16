@@ -120,6 +120,7 @@ body {
     background: #FFF8FF;
     border-radius: 3px;
     border: 2px solid #6550A4;
+    z-index: 1000;
 }
 
 .popup-container h1,
@@ -175,7 +176,6 @@ body {
     left: 50%;
     transform: translate(-50%, -50%) scale(0.1);
 
-    z-index: 1000;
     box-sizing: border-box;
     overflow: auto;
     visibility: hidden;
@@ -204,7 +204,6 @@ body {
     left: 50%;
     transform: translate(-50%, -50%) scale(0.1);
 
-    z-index: 1000;
     box-sizing: border-box;
     overflow: auto;
     visibility: hidden;
@@ -233,7 +232,6 @@ body {
     left: 50%;
     transform: translate(-50%, -50%) scale(0.1);
 
-    z-index: 1000;
     box-sizing: border-box;
     overflow: auto;
     visibility: hidden;
@@ -263,7 +261,6 @@ body {
     left: 50%;
     transform: translate(-50%, -50%) scale(0.1);
 
-    z-index: 1000;
     box-sizing: border-box;
     overflow: auto;
     visibility: hidden;
@@ -293,7 +290,6 @@ body {
     left: 50%;
     transform: translate(-50%, -50%) scale(0.1);
 
-    z-index: 1000;
     box-sizing: border-box;
     overflow: auto;
     visibility: hidden;
@@ -324,7 +320,6 @@ body {
     left: 50%;
     transform: translate(-50%, -50%) scale(0.1);
 
-    z-index: 1000;
     box-sizing: border-box;
     overflow: auto;
     visibility: hidden;
