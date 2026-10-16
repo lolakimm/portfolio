@@ -243,7 +243,7 @@ body {
 #projects-popup.open-popup {
     visibility: visible;
     top: 55%;
-    transform: translate(-40%, -56.5%) scale(1);
+    transform: translate(10px, -325px) scale(1);
 }
 
 #projects-popup h2 {
@@ -303,7 +303,7 @@ body {
 #github-popup.open-popup {
     visibility: visible;
     top: 50%;
-    transform: translate(0%, -20%) scale(1);
+    transform: translate(240px, 160px) scale(1);
 }
 
 #github-popup h2 {
@@ -313,4 +313,26 @@ body {
     font-weight: 400;
     color: #6550A4;
     text-align: center;
+}
+
+#linkedin-popup {
+    width: 250px;
+    height: 100px;
+
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+
+    z-index: 1000;
+    box-sizing: border-box;
+    overflow: auto;
+    visibility: hidden;
+    transition: transform 0.3s, top 0.3s;
+}
+
+#linkedin-popup.open-popup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(50%, -150%) scale(1);
 }

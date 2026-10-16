@@ -93,3 +93,13 @@ function closeGithubPopup() {
     let popup = document.getElementById("github-popup");
     popup.classList.remove("open-popup");
 }
+
+function openLinkedInPopup() {
+    let popup = document.getElementById("linkedin-popup");
+    popup.classList.add("open-popup");
+}
+
+function closeLinkedInPopup() {
+    let popup = document.getElementById("linkedin-popup");
+    popup.classList.remove("open-popup");
+}

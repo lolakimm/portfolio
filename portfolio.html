@@ -86,7 +86,7 @@
           <div id="skills-popup" class="popup-container">
             <div class="popup-banner">
               <h1>Skills.txt</h1>
-              <button id="close-skills-popup" class="close-popup-btn" onclick="closeSkillsPopup()">X</button>
+              <button id="close-skills-btn" class="close-popup-btn" onclick="closeSkillsPopup()">X</button>
             </div>
             <h2>Languages:</h2>
             <h2>Frameworks and Tools:</h2>
@@ -105,7 +105,7 @@
           <div id="github-popup" class="popup-container">
             <div class="popup-banner">
               <h1>Github</h1>
-              <button id="close-github-popup" class="close-popup-btn" onclick="closeGithubPopup()">X</button>
+              <button id="close-github-btn" class="close-popup-btn" onclick="closeGithubPopup()">X</button>
             </div>
             <h2>Github: https://github.com/lolakimm</h2>
           </div>
@@ -114,10 +114,16 @@
 
       <div class="linkedin">
         <div class="button-container">
-          <button id="linkedin-btn" class="btn">
+          <button id="linkedin-btn" class="btn" onclick="openLinkedInPopup()">
             <img src="images/linkedin.png">
           </button>
           <label for="linkedin-btn">LinkedIn</label>
+          <div id="linkedin-popup" class="popup-container">
+            <div class="popup-banner">
+              <h1>LinkedIn.msg</h1>
+              <button id="close-linkedin-btn" class="close-popup-btn" onclick="closeLinkedInPopup()">X</button>
+            </div>
+          </div>
         </div>
       </div>
   
