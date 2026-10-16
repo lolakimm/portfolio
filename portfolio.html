@@ -98,10 +98,17 @@
 
       <div class="github">
         <div class="button-container">
-          <button id="github-btn" class="btn">
+          <button id="github-btn" class="btn" onclick="openGithubPopup()">
             <img src="images/github.png">
           </button>
           <label for="github-btn">GitHub</label>
+          <div id="github-popup" class="popup-container">
+            <div class="popup-banner">
+              <h1>Github</h1>
+              <button id="close-github-popup" class="close-popup-btn" onclick="closeGithubPopup()">X</button>
+            </div>
+            <h2>Github: https://github.com/lolakimm</h2>
+          </div>
         </div>
       </div>
 

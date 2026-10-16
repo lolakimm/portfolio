@@ -83,3 +83,13 @@ function closeSkillsPopup() {
     let popup = document.getElementById("skills-popup");
     popup.classList.remove("open-popup");
 }
+
+function openGithubPopup() {
+    let popup = document.getElementById("github-popup");
+    popup.classList.add("open-popup");
+}
+
+function closeGithubPopup() {
+    let popup = document.getElementById("github-popup");
+    popup.classList.remove("open-popup");
+}

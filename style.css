@@ -283,3 +283,34 @@ body {
     font-weight: 400;
     color: #6550A4;
 }
+
+#github-popup {
+    width: 320px;
+    height: 100px;
+
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+
+    z-index: 1000;
+    box-sizing: border-box;
+    overflow: auto;
+    visibility: hidden;
+    transition: transform 0.3s, top 0.3s;
+}
+
+#github-popup.open-popup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(0%, -20%) scale(1);
+}
+
+#github-popup h2 {
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #6550A4;
+    text-align: center;
+}
