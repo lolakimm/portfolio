@@ -16,6 +16,7 @@ let topZ = 1000;
 
 function bringToFront(popup) {
     popup.style.zIndex = ++topZ;
+    updateActiveTab();
 }
 
 function makeDraggable(popup) {
@@ -53,43 +54,48 @@ function makeDraggable(popup) {
 
 document.querySelectorAll('.popup-container').forEach(makeDraggable);
 
+function addTab(id) {
+    // check if tab is already open
+    if (document.getElementById("tab-" + id)) return;
+
+    const popup = document.getElementById(id);
+    const title = popup.querySelector(".popup-banner h1").textContent;
+
+    const tab = document.createElement("button");
+    tab.id = "tab-" + id;
+    tab.className = "taskbar-tab";
+    tab.textContent = title;
+    tab.onclick = () => bringToFront(popup);
+
+    document.getElementById("taskbar-tabs").appendChild(tab);
+}
+
+function removeTab(id) {
+    const tab = document.getElementById("tab-" + id);
+    if (tab) tab.remove();
+}
+
+function updateActiveTab() {
+    let top = null;
+    document.querySelectorAll('.popup-container.open-popup').forEach(p => {
+        if (!top || Number(p.style.zIndex) > Number(top.style.zIndex)) top = p;
+    });
+
+    document.querySelectorAll('.taskbar-tab').forEach(tab => {
+        tab.classList.toggle('active', top && tab.id === 'tab-' + top.id);
+    });
+}
+
 function openPopup(id) {
     const popup = document.getElementById(id);
     popup.classList.add("open-popup");
+    addTab(id);
     bringToFront(popup);
 }
 
 function closePopup(id) {
     const popup = document.getElementById(id);
     popup.classList.remove("open-popup");
+    removeTab(id);
+    updateActiveTab();
 }
-
-// function closeAboutMePopup() {
-//     let popup = document.getElementById("about-me-popup");
-//     popup.classList.remove("open-popup");
-// }
-
-// function closeContactLinksPopup() {
-//     let popup = document.getElementById("contact-links-popup");
-//     popup.classList.remove("open-popup");
-// }
-
-// function closeProjectsPopup() {
-//     let popup = document.getElementById("projects-popup");
-//     popup.classList.remove("open-popup");
-// }
-
-// function closeSkillsPopup() {
-//     let popup = document.getElementById("skills-popup");
-//     popup.classList.remove("open-popup");
-// }
-
-// function closeGithubPopup() {
-//     let popup = document.getElementById("github-popup");
-//     popup.classList.remove("open-popup");
-// }
-
-// function closeLinkedInPopup() {
-//     let popup = document.getElementById("linkedin-popup");
-//     popup.classList.remove("open-popup");
-// }

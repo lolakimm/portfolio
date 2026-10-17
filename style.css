@@ -72,12 +72,40 @@ body {
     margin-top: auto;
 }
 
+.bottom-banner-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
 .bottom-banner-content h1 {
     margin: 0;
     margin-top: auto;
     font-family: 'Pixelify Sans', sans-serif;
     font-weight: 400;
     font-size: 20px;
+}
+
+#taskbar-tabs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.taskbar-tab {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 14px;
+    color: #6550A4;
+    background: #FFF8FF;
+    border: 2px solid #FFEBFF;
+    border-radius: 3px;
+    padding: 2px 10px;
+    cursor: pointer;
+}
+
+.taskbar-tab.active {
+    background: #FFD6ED;
+    border-color: #FF65B5;
 }
 
 /* Desktop Icons */
